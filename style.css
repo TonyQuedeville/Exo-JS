@@ -1,0 +1,40 @@
+
+div {
+    background-color: rgb(174, 127, 218);
+    border: solid;
+    border-color: 'black';
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+
+.container {
+    border: solid 1px 'black';
+    height: 300px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row; /* change la direction des axes : row, column */
+    justify-content: space-around; /* axe primaire (horizontal) :flex-end, center, space-between */
+    align-items: center; /* axe secondaire (vertical) : flex-start, flex-end */
+
+    /* Wrap */
+    flex-wrap: wrap; /* responsive bascule en dessous quand trop petit */
+    /*align-content: space-around;*/
+}
+
+.item {
+    height: 50px;
+    width: 50px;
+}
+
+#item1 {
+    order: 1; /* poids de l'élémnent. 0 par défault */
+    flex-grow: 1; /* 1/3 de l'espace vide */
+}
+
+#item2 {
+    order: 2; /* poids de l'élémnent. 0 par défault */
+    align-self: flex-start;
+    flex-grow: 2; /* 2/3 de l'espace vide */
+}
